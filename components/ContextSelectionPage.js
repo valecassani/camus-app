@@ -234,11 +234,11 @@ var ContextSelectionPage = React.createClass({
                             "fields": [
                                 {
                                     "name": "Latitude",
-                                    "value": this.state.currentPosition.latitude
+                                    "value": this.state.contextData.location.latitude
                                 },
                                 {
                                     "name": "Longitude",
-                                    "value":this.state.currentPosition.longitude
+                                    "value":this.state.contextData.location.longitude
                                 }
                             ]
                         }
@@ -267,13 +267,38 @@ var ContextSelectionPage = React.createClass({
                 case 'Tipology':
                     parameters = [
                         {
-                            "name": "Tipology",
+                            "name": "Typology",
                             "value": this.state.contextData.tipology
                         }
                     ]
                     break;
                 case 'OS' :
                     value = (Platform.OS === 'android') ? 'Android' : 'iOS'
+                    break;
+
+                case 'Cuisine':
+                    parameters = [
+                        {
+                            "name":"Cuisine",
+                            "value": this.state.contextData.cuisine
+                        }
+                    ]
+                    break;
+                case 'Budget':
+                    parameters = [
+                        {
+                            "name":"Budget",
+                            "value": this.state.contextData.budget
+                        }
+                    ]
+                    break;
+                case 'Context':
+                    parameters = [
+                        {
+                            "name":"Context",
+                            "value": this.state.contextData.context
+                        }
+                    ]
                     break;
                 }
             if (value === null && parameters === null)

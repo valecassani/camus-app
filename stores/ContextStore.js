@@ -20,7 +20,10 @@ class ContextStore {
             handleAddForbidden: ContextActions.addForbidden,
 
             handleRemoveForbidden: ContextActions.removeForbidden,
-            handleUpdateLastContext: ContextActions.updateLastContext
+            handleUpdateLastContext: ContextActions.updateLastContext,
+            handleSetCuisine: ContextActions.setCuisine,
+            handleSetBudget: ContextActions.setBudget,
+            handleSetContext: ContextActions.setContext
 
         });
         // TODO aggiungere costruzione dinamica dei valori basandosi sul cdt
@@ -79,6 +82,24 @@ class ContextStore {
     handleUpdateLastContext(value) {
         this.setState({
             lastContext : value
+        })
+    }
+
+    handleSetContext(value) {
+        this.setState({
+            context: value
+        })
+    }
+
+    handleSetBudget(value) {
+        this.setState({
+            budget: value
+        })
+    }
+
+    handleSetCuisine(value) {
+        this.setState({
+            cuisine: value
         })
     }
 }

@@ -354,6 +354,64 @@ var ViewBuilder = React.createClass({
                             </View>
                         )
                     }
+                    break;
+                case 'Cuisine':
+                    var pickerData = cdtElement.values;
+                    return (
+                        <View key = {index}>
+                            <Text style={styles.contextTitle}>{cdtElement.name}</Text>
+                                <SegmentedControls
+                                  options={pickerData}
+                                  tint= {PRIMARY_COLOR}
+                                  selectedTint= {'white'}
+                                  selectedBackgroudColor={PRIMARY_COLOR}
+                                  backTint= {'white'}
+                                  onSelection={ (option) => {
+                                      this.setState({cuisine: option});
+                                      ContextActions.setCuisine(this.state.cuisine);
+                                  } }
+                                  selectedOption={this.state.cuisine}
+                                />
+                        </View>
+                    )
+                case 'Budget':
+                    var pickerData = cdtElement.values
+                    return (
+                        <View key = {index}>
+                            <Text style={styles.contextTitle}>{cdtElement.name}</Text>
+                                <SegmentedControls
+                                  options={pickerData}
+                                  tint= {PRIMARY_COLOR}
+                                  selectedTint= {'white'}
+                                  selectedBackgroudColor={PRIMARY_COLOR}
+                                  backTint= {'white'}
+                                  onSelection={ (option) => {
+                                      this.setState({budget: option});
+                                      ContextActions.setBudget(this.state.cuisine);
+                                  } }
+                                  selectedOption={this.state.budget}
+                                />
+                        </View>
+                    )
+                case 'Context':
+                var pickerData = cdtElement.values
+                return (
+                    <View key = {index}>
+                        <Text style={styles.contextTitle}>{cdtElement.name}</Text>
+                            <SegmentedControls
+                              options={pickerData}
+                              tint= {PRIMARY_COLOR}
+                              selectedTint= {'white'}
+                              selectedBackgroudColor={PRIMARY_COLOR}
+                              backTint= {'white'}
+                              onSelection={ (option) => {
+                                  this.setState({context: option});
+                                  ContextActions.setContext(this.state.context);
+                              } }
+                              selectedOption={this.state.context}
+                            />
+                    </View>
+                )
 
 
                 default:

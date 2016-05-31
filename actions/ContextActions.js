@@ -49,6 +49,24 @@ class ContextActions {
         }
     }
 
+    setCuisine(value) {
+        return function(dispatch) {
+            dispatch(value)
+        }
+    }
+
+    setBudget(value) {
+        return function(dispatch){
+            dispatch(value)
+        }
+    }
+
+    setContext(value) {
+        return function(dispatch) {
+            dispatch(value)
+        }
+    }
+
 }
 
 module.exports = alt.createActions(ContextActions);

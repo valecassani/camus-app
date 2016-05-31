@@ -22,8 +22,7 @@ exports.getCurrentLocation = function getCurrentLocation() {
         // Running in iOS app
         // In this case there is a testing position (Turbigo (MI))
         ContextActions.setLocation({
-            latitude: 45.5337064, longitude:  8.7332023
+            latitude: 45.4838452, longitude:  9.2363553
         })
     }
-
 }
