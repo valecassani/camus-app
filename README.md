@@ -17,6 +17,9 @@ Mobile application of the CAMUS (Context Aware Mobile mashUpS) project by DEIB o
 ### Android
 - Navigate to android/app/src/main/res/values/ and open the file google-maps-api.xml
 - Insert the Google Maps API key, if you don't have one follow this guide https://developers.google.com/maps/signup
+- Then navigate to components/dataComponents/ and open the file Support.js
+- Insert your Google Maps Distance Matrix API key at line 20; if you don't have one follow this guide https://developers.google.com/maps/documentation/distance-matrix/get-api-key#key (Terms of use: https://developers.google.com/maps/documentation/distance-matrix/policies)
+
 - In the terminal type:
 
         react-native run-android
