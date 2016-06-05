@@ -17,7 +17,7 @@ import ContextStore from '../../stores/ContextStore'
 
 import {MKButton,MKColor,MKSpinner} from 'react-native-material-kit'
 
-var key = "AIzaSyBlW7hyT58AaLoEaJOZP7xk_O26_ii6XfE"
+var key = "your-api-key"
 
 var BASIC_URL = 'https://maps.googleapis.com/maps/api/distancematrix/json?language=en&';
 
