@@ -213,8 +213,6 @@ var ContextSelectionPage = React.createClass({
             var parameters = null;
             var skipItem = false;
             _.forEach(item.values, val => {
-              console.log("FOREACH ERROR")
-              console.log(this.state);
                 if (_.includes(this.state.contextData.forbidden,val) && val === 'Transport') {
                     skipItem = true;
                 }
